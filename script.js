@@ -46,3 +46,30 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("active");
   });
 });
+// ==================scroll reveal
+ScrollReveal({
+  reset: true,
+  duration: 2000,
+  delay: 200,
+  distance: "80px",
+});
+ScrollReveal().reveal(".left , .headings   ,.logo", {
+  origin: "top",
+});
+ScrollReveal().reveal(".right,.fix-image-container,form ,footer", {
+  origin: "bottom",
+});
+ScrollReveal().reveal(" .left-about", {
+  origin: "left",
+});
+ScrollReveal().reveal(".right-about", {
+  origin: "right",
+});
+// -==============typed js==============
+const typed = new Typed(".multiple-texts", {
+  strings: ["Web Developer", "First Year Student"],
+  typeSpeed: 150,
+  backSpeed: 50,
+  backDelay: 1000,
+  loop: true,
+});

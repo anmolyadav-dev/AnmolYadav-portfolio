@@ -103,8 +103,10 @@ body {
   z-index: inherit;
 }
 .navbar a {
-  padding-left: 2.5rem;
+  margin-left: 2.5rem;
+  padding-bottom: 1rem;
   color: var(--text-color);
+  transition: all 0.5s ease;
 }
 .navbar a:hover,
 .navbar a.active {
@@ -527,6 +529,7 @@ footer a:hover {
   /* .header a{
    display: none;
   } */
+
   .header > div,
   .header i {
     z-index: 999;
@@ -559,7 +562,10 @@ footer a:hover {
     text-align: center;
     margin: 3rem;
   }
-  .image-layer a {
+  .image-layer {
+    display: none;
+  }
+  /* .image-layer a {
     width: 1rem;
     height: 1rem;
     font-size: 0.7rem;
@@ -571,7 +577,7 @@ footer a:hover {
   .image-layer p {
     margin-bottom: 0.5rem;
     font-size: 0.7rem;
-  }
+  } */
   #contact {
     display: flex;
     flex-direction: column;
@@ -682,19 +688,19 @@ footer a:hover {
 }
 
 @media (max-width: 510px) {
-  .image-layer h4 {
+  /* .image-layer h4 {
     font-size: 1.5rem;
     margin: 1rem 0;
-  }
+  } */
   #contact form .button {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 445px) {
-  .image-layer h4 {
+@media (max-width: 475px) {
+  /* .image-layer h4 {
     font-size: 1.2rem;
     margin: 0.5rem 0;
-  }
+  } */
 
   #home .left .basic-heading {
     font-size: 2rem;

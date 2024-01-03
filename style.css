@@ -39,7 +39,7 @@ body {
   background-color: var(--darker-shade);
   color: var(--text-color);
 }
-#loader{
+#loader {
   position: fixed;
   background-color: #323946;
   width: 100vw;
@@ -63,28 +63,28 @@ body {
   background-color: var(--darker-shade);
   z-index: 99;
 }
-.loader-hidden{
+.loader-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
-#loader::after{
+#loader::after {
   content: "";
   width: 5rem;
   height: 5rem;
-  border:0.4rem solid #1f242d;
+  border: 0.4rem solid #1f242d;
   border-top: #2ef solid 0.4rem;
   border-radius: 999px;
   animation: loading 0.5s ease infinite;
 }
 
-@keyframes loading{
- from{
-  transform: rotate(0turn);
- }
- to{
-  transform: rotate(1turn);
- }
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 .logo {
@@ -476,7 +476,7 @@ footer a:hover {
 }
 
 /* ========== BREAKPOINTS========= */
-@media (width<1600px) {
+@media (max-width: 1600px) {
   .image-layer h4 {
     font-size: 1rem;
     margin: 1rem 0;
@@ -485,11 +485,11 @@ footer a:hover {
     font-size: 0.7rem;
   }
   .image-layer a {
-   width: 0.5rem;
-   height: 0.5rem;
-   font-size: 0.7rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    font-size: 0.7rem;
+  }
 }
-
 @media (max-width: 1100px) {
   html {
     font-size: 55%;
@@ -527,16 +527,17 @@ footer a:hover {
   /* .header a{
    display: none;
   } */
-  .header>div, .header i{
+  .header > div,
+  .header i {
     z-index: 999;
-  } 
-  .header #menu-icon{
+  }
+  .header #menu-icon {
     display: block;
-    justify-content: space-between  ;
+    justify-content: space-between;
     gap: 10rem;
     font-size: 3rem;
   }
-  .navbar{
+  .navbar {
     position: absolute;
     /* display: none; */
     transform: translateY(-200%);
@@ -545,14 +546,14 @@ footer a:hover {
     width: 100%;
     padding: 1rem 3%;
     background-color: var(--darker-shade);
-    border-top: .1rem solid rgba(0, 0, 0, 0.2);
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease;
   }
- .active{
-   transform: none;
+  .active {
+    transform: none;
   }
-  .navbar a{
+  .navbar a {
     display: block;
     font-size: 3rem;
     text-align: center;
@@ -576,7 +577,7 @@ footer a:hover {
     flex-direction: column;
     align-items: center;
   }
-  #contact h2{
+  #contact h2 {
     font-size: 6rem;
   }
   #contact form {
@@ -596,7 +597,6 @@ footer a:hover {
   #contact form textarea {
     font-size: 1.5rem;
     border-radius: 2rem;
-
   }
   #contact form .button {
     margin-top: 2rem;
@@ -605,10 +605,11 @@ footer a:hover {
     font-size: 2.5rem;
   }
   /* .... */
-  .header{
+  .header {
     height: 10vh;
   }
-  .header,.logo{
+  .header,
+  .logo {
     font-size: 5rem;
   }
   #home {
@@ -618,32 +619,31 @@ footer a:hover {
     gap: 5rem;
     align-items: center;
     padding-left: none;
-   
-
   }
 
-  #home .left   .basic-heading,#home .left   .basic-details{
+  #home .left .basic-heading,
+  #home .left .basic-details {
     font-size: 3rem;
   }
- .basic-details{
-  line-height: 5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  border-right: #2ef 2px solid;
- }
- 
+  .basic-details {
+    line-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    border-right: #2ef 2px solid;
+  }
+
   #home .right img {
     width: 45vw;
   }
-  .icons a{
+  .icons a {
     width: 6rem;
-    height:6rem;
+    height: 6rem;
   }
   .cv button {
     width: 20rem;
-  height: 5rem;
-  font-size: 1.5rem;
+    height: 5rem;
+    font-size: 1.5rem;
   }
   #projects .upper-container,
   #projects .lower-container {
@@ -656,7 +656,7 @@ footer a:hover {
     width: 65vw;
     height: 45vw;
   }
-  #projects h2{
+  #projects h2 {
     font-size: 6rem;
   }
 
@@ -679,22 +679,102 @@ footer a:hover {
   .right-about p {
     margin-bottom: 1.5rem;
   }
-  
 }
-
 
 @media (max-width: 510px) {
   .image-layer h4 {
     font-size: 1.5rem;
     margin: 1rem 0;
   }
+  #contact form .button {
+    font-size: 1.5rem;
+  }
 }
-@media (max-width: 435px) {
+@media (max-width: 445px) {
   .image-layer h4 {
     font-size: 1.2rem;
     margin: 0.5rem 0;
   }
+
+  #home .left .basic-heading {
+    font-size: 2rem;
+  }
+  #home .left .basic-details {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    gap: 1rem;
+    border: none;
+  }
+  #home .left .basic-details :nth-child(2) {
+    font-size: 2rem;
+  }
+  #home a {
+    font-size: 2rem;
+  }
+  #about p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  #about div {
+    font-size: 2rem;
+  }
   #contact form .button {
-    font-size: 0.6rem;
+    font-size: 1.4rem;
+  }
+  footer .footer {
+    padding: none;
+  }
+  footer div,
+  footer > div div {
+    font-size: 90%;
+    margin: 0;
+  }
+  footer div #footer-name {
+    font-size: 90%;
+  }
+}
+@media (max-width: 390px) {
+  .right-about a {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  .right-about p {
+    font: 0.7rem;
+  }
+}
+@media (max-width: 345px) {
+  #home .left .basic-heading {
+    line-height: 1.5;
+    font-size: 2rem;
+  }
+  #home .left .basic-details {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    gap: 1rem;
+    border: none;
+  }
+  #home .left .basic-details :nth-child(2) {
+    font-size: 1.5rem;
+  }
+  .icons a {
+    width: 4rem;
+    height: 4rem;
+  }
+  #about p {
+    font-size: 1rem;
+  }
+  #about .right-about span {
+    font-size: 2rem;
+  }
+  #about .right-about div {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 300px) {
+  #home .left h1 {
+    font-size: 2.5rem;
+  }
+  #home .left span {
+    font-size: 1.8rem;
   }
 }

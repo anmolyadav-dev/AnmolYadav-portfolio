@@ -181,6 +181,9 @@ span {
   cursor: pointer;
   transition: all 0.5s ease;
 }
+.cv button a {
+  color: #1f242d;
+}
 .cv button:hover {
   box-shadow: none;
 }

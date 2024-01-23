@@ -32,6 +32,22 @@
   --darker-shade: #1f242d;
   --lighter-shade: #323946;
 }
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(46, 255, 255, 0.7736344537815126) 100%
+  );
+
+  border-radius: 999px;
+}
+::-webkit-scrollbar-track {
+  background-color: #323946;
+}
 html,
 body {
   height: 100%;

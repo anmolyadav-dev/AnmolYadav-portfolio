@@ -62,7 +62,7 @@ const typed = new Typed(".multiple-texts", {
   loop: true,
 });
 
-// ===========gsap nanvbar================
+// ===========gsap header dropping animation================
 
 gsap.from(".header", {
   y: -100,

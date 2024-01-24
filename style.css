@@ -311,12 +311,13 @@ span {
 }
 
 #container1 {
-  background: url(assets/images/project1.jpg);
+  background: url(assets/images/project1.png);
   background-size: cover;
+  background-position: center;
 }
 #container2 {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
-    url(assets/images/project2.jpg);
+    url(assets/images/project2.png);
   background-size: cover;
 }
 #container3 {

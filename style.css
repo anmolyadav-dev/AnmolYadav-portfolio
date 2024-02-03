@@ -324,6 +324,7 @@ span {
 #container3 {
   background-image: url(assets/images/project3.png);
   background-size: cover;
+  background-position: center;
 }
 #container4 {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),

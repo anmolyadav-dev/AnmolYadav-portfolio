@@ -298,6 +298,10 @@ span {
 }
 .image-container {
   position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
   width: 22vw;
   height: 15vw;
   border-radius: 2rem;
@@ -307,21 +311,24 @@ span {
 }
 
 #container1 {
-  background: url(assets/images/project1.jpg);
+  background: url(assets/images/project1.png);
   background-size: cover;
+  background-position: center;
 }
 #container2 {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
-    url(assets/images/project2.jpg);
+    url(assets/images/project2.png);
+  background-position: center;
   background-size: cover;
 }
 #container3 {
-  background-image: url(assets/images/project3.jpg);
+  background-image: url(assets/images/project3.png);
   background-size: cover;
+  background-position: center;
 }
 #container4 {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
-    url(assets/images/project4.jpg);
+    url(assets/images/project4.png);
   background-position: center;
   background-size: cover;
 }
@@ -336,16 +343,29 @@ span {
   background-size: cover;
 }
 
+/* ALL HOVER EFFECTS FOR SIZE GREATER THAN 720 */
+@media (min-width: 720px) {
+  .image-container:hover {
+    transform: scale(1.1);
+  }
+  .image-container:hover .image-layer {
+    transform: translateY(0) scale(0.95);
+  }
+  #container1:hover #layer1,
+  #container2:hover #layer2,
+  #container3:hover #layer3,
+  #container4:hover #layer4 {
+    transform: translateY(0) scale(0.95);
+  }
+  .image-container h3 {
+    display: none;
+  }
+}
 .fix-image-container {
   overflow: hidden;
   border-radius: 2rem;
 }
-.image-container:hover {
-  transform: scale(1.1);
-}
-.image-container:hover .image-layer {
-  transform: translateY(0) scale(0.95);
-}
+
 .image-layer {
   display: flex;
   flex-direction: column;
@@ -354,13 +374,28 @@ span {
   font-size: 1.3rem;
   text-align: center;
   padding: 0 4rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
-  border-radius: inherit;
+  background: rgba(119, 118, 118, 0.615);
+  border-radius: none;
   width: 100%;
-  height: 100%;
-  transform: translateY(150%);
+  height: 40%;
+  /* transform: translateY(150%); */
   transition: all 0.4s ease-in-out;
   /* display: none; */
+}
+#layer1 {
+  transform: translateY(150%);
+  transition: all 0.4s ease-in-out;
+  height: 110%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), var(--main-color));
+}
+#layer1,
+#layer2,
+#layer4,
+#layer3 {
+  transform: translateY(150%);
+  transition: all 0.4s ease-in-out;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), var(--main-color));
 }
 
 .image-layer h4 {
@@ -581,10 +616,8 @@ footer a:hover {
     text-align: center;
     margin: 3rem;
   }
-  .image-layer {
-    display: none;
-  }
-  /* .image-layer a {
+
+  .image-layer a {
     width: 1rem;
     height: 1rem;
     font-size: 0.7rem;
@@ -596,12 +629,41 @@ footer a:hover {
   .image-layer p {
     margin-bottom: 0.5rem;
     font-size: 0.7rem;
-  } */
+  }
   #contact {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  /* for the added projects */
+  #layer1,
+  #layer2,
+  #layer4,
+  #layer3 {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transform: translateY(0) scale(1);
+  }
+  #layer1 a,
+  #layer2 a,
+  #layer4 a,
+  #layer3 a {
+    width: 200%;
+    height: 100%;
+    opacity: 0;
+  }
+  #layer1 h4,
+  #layer2 h4,
+  #layer3 h4,
+  #layer4 h4,
+  #layer1 p,
+  #layer2 p,
+  #layer4 p,
+  #layer3 p {
+    display: none;
+  }
+
   #contact h2 {
     font-size: 6rem;
   }
@@ -707,19 +769,19 @@ footer a:hover {
 }
 
 @media (max-width: 510px) {
-  /* .image-layer h4 {
+  .image-layer h4 {
     font-size: 1.5rem;
     margin: 1rem 0;
-  } */
+  }
   #contact form .button {
     font-size: 1.5rem;
   }
 }
 @media (max-width: 475px) {
-  /* .image-layer h4 {
+  .image-layer h4 {
     font-size: 1.2rem;
     margin: 0.5rem 0;
-  } */
+  }
 
   #home .left .basic-heading {
     font-size: 2rem;

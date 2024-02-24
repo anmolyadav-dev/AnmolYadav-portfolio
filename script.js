@@ -9,18 +9,6 @@ var navbar = document.querySelector(".navbar");
 menuIcon.addEventListener("click", () => {
   navbar.classList.toggle("active");
 });
-// remove navbar when clicked on any link
-
-// var prevScrollPos = window.scrollY;
-
-// function handleScroll() {
-//   var currentScrollPos = window.scrollY;
-
-//   if (prevScrollPos != currentScrollPos) {
-//     navbar.classList.remove("active");
-//   }
-// }
-// window.addEventListener("scroll", handleScroll);
 
 // ===============SCROLL PAGE ACTIVE LINK ON NAVBAR
 
@@ -46,7 +34,6 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("active");
   });
 });
-
 // ==================scroll reveal
 ScrollReveal({
   reset: true,
@@ -54,10 +41,10 @@ ScrollReveal({
   delay: 200,
   distance: "80px",
 });
-ScrollReveal().reveal(".left , .headings   ,.logo", {
+ScrollReveal().reveal(".left , .headings ", {
   origin: "top",
 });
-ScrollReveal().reveal(".right,.fix-image-container,form ,footer", {
+ScrollReveal().reveal(".right,.fix-image-container,form", {
   origin: "bottom",
 });
 ScrollReveal().reveal(" .left-about", {
@@ -73,4 +60,12 @@ const typed = new Typed(".multiple-texts", {
   backSpeed: 50,
   backDelay: 1000,
   loop: true,
+});
+
+// ===========gsap header dropping animation================
+
+gsap.from(".header", {
+  y: -100,
+  duration: 1,
+  delay: 0.5,
 });

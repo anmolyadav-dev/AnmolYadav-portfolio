@@ -328,7 +328,7 @@ span {
 }
 #container4 {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
-    url(assets/images/project4.jpg);
+    url(assets/images/project4.png);
   background-position: center;
   background-size: cover;
 }
@@ -353,7 +353,8 @@ span {
   }
   #container1:hover #layer1,
   #container2:hover #layer2,
-  #container3:hover #layer3 {
+  #container3:hover #layer3,
+  #container4:hover #layer4 {
     transform: translateY(0) scale(0.95);
   }
   .image-container h3 {
@@ -389,6 +390,7 @@ span {
 }
 #layer1,
 #layer2,
+#layer4,
 #layer3 {
   transform: translateY(150%);
   transition: all 0.4s ease-in-out;
@@ -636,6 +638,7 @@ footer a:hover {
   /* for the added projects */
   #layer1,
   #layer2,
+  #layer4,
   #layer3 {
     width: 100%;
     height: 100%;
@@ -644,6 +647,7 @@ footer a:hover {
   }
   #layer1 a,
   #layer2 a,
+  #layer4 a,
   #layer3 a {
     width: 200%;
     height: 100%;
@@ -652,8 +656,10 @@ footer a:hover {
   #layer1 h4,
   #layer2 h4,
   #layer3 h4,
+  #layer4 h4,
   #layer1 p,
   #layer2 p,
+  #layer4 p,
   #layer3 p {
     display: none;
   }
